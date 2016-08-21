@@ -171,9 +171,13 @@
 	pinctrl-0 = <&audio_pins>;
 };
 
+&pwm {
+	status = "okay";
+};
+
 / {
 	chosen {
-		bootargs = "8250.nr_uarts=1";
+		bootargs = "8250.nr_uarts=1 ignore_loglevel";
 	};
 };
 
